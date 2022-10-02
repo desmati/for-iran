@@ -1,5 +1,13 @@
 let html = document.getElementsByTagName('html')[0];
 let body = document.getElementsByTagName('body')[0];
+
+let videos = document.getElementsByTagName('video');
+for (var i = 0; i < videos.length; i++) {
+    setTimeout(function () {
+        this.play();
+    }.bind(videos[i]), 500 + i * 100);
+}
+
 let buttonContrast = document.getElementById('btn-contrast');
 buttonContrast.addEventListener('click', function (e) {
     if (body.classList.contains('hide-images')) {
