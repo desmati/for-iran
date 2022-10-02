@@ -1,4 +1,8 @@
-button {
+#btn-contrast,
+#btn-font-increase,
+#btn-font-decrease {
+    width: 120px;
+    text-align: center;
     position: fixed;
     top: 12px;
     left: 12px;
@@ -12,6 +16,17 @@ button {
     cursor: pointer;
 }
 
+#btn-font-increase,
+#btn-font-decrease {
+    width: 30px;
+    left: 140px;
+}
+
+#btn-font-decrease {
+    width: 30px;
+    left: 180px;
+}
+
 h1 {
     z-index: 2;
     color: #fff;
@@ -22,14 +37,13 @@ h1 {
     transform: translateY(-50%);
     padding: 1rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
-h1 span {
-    display: block;
-    width: 25rem;
-    animation: bounce-move 3s linear infinite alternate;
+h1>span {
     text-shadow: 2px 2px 4px #000;
+    display: block;
+    text-align: center;
 }
 
 @keyframes bounce-move {
@@ -186,6 +200,9 @@ article h1 {
     }
 
     h1 span {
+        display: block;
+        width: 25rem;
+        text-align: center;
         animation: bounce-move 5s linear infinite alternate;
     }
 
