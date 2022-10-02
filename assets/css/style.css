@@ -27,14 +27,14 @@ h1 {
 
 h1 span {
     display: block;
-    width: 20rem;
+    width: 25rem;
     animation: bounce-move 3s linear infinite alternate;
     text-shadow: 2px 2px 4px #000;
 }
 
 @keyframes bounce-move {
     0% {
-        transform: translateX(calc(100vw - 20rem));
+        transform: translateX(calc(100vw - 25rem));
     }
 
     100% {
