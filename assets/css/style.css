@@ -124,7 +124,7 @@ h1>span {
 .section:last-child:before {
     /* The first and last box background color */
     background: url(../img/flag-plain.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: repeat-x;
     background-position: 50% 50%;
     background-color: #8d8d8d;
@@ -231,6 +231,13 @@ article h1 {
         width: 400vw;
         transform: skewX(-15deg);
     }
+
+    .section:first-child:before,
+    .section:last-child:before {
+        /* The first and last box background color */
+        background-size: contain;
+    }
+
 
     article {
         display: flex;
