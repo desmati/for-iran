@@ -89,7 +89,8 @@ h1>span {
     transition: flex-grow 0.2s, opacity 0.2s;
 }
 
-.section video {
+.section video,
+.section canvas {
     width: 100vw;
     height: auto;
     position: absolute;
@@ -188,8 +189,9 @@ article h1 {
     display: none;
 }
 
-.hide-images .section video {
-    display: none;
+.hide-images .section video,
+.hide-images .section canvas {
+    display: none !important;
 }
 
 
@@ -243,7 +245,8 @@ article h1 {
         transform: skewX(-15deg);
     }
 
-    .section video {
+    .section video,
+    .section canvas {
         transform: skewX(-15deg);
         width: auto;
         height: 100vh;

@@ -1,13 +1,8 @@
 let html = document.getElementsByTagName('html')[0];
 let body = document.getElementsByTagName('body')[0];
+let isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
 
-let videos = document.getElementsByTagName('video');
-for (var i = 0; i < videos.length; i++) {
-    setTimeout(function () {
-        this.play();
-    }.bind(videos[i]), 500 + i * 100);
-}
-
+// Toggling how contrast mode
 let buttonContrast = document.getElementById('btn-contrast');
 buttonContrast.addEventListener('click', function (e) {
     if (body.classList.contains('hide-images')) {
@@ -19,6 +14,7 @@ buttonContrast.addEventListener('click', function (e) {
     }
 });
 
+// Increasing font size
 let buttonFontIncrease = document.getElementById('btn-font-increase');
 buttonFontIncrease.addEventListener('click', function (e) {
     let computedFontSize = window.getComputedStyle(html).fontSize;
@@ -28,6 +24,7 @@ buttonFontIncrease.addEventListener('click', function (e) {
     html.style.fontSize = newFontSize;
 });
 
+// Decreasing font size
 let buttonFontDecrease = document.getElementById('btn-font-decrease');
 buttonFontDecrease.addEventListener('click', function (e) {
     let computedFontSize = window.getComputedStyle(html).fontSize;
@@ -37,6 +34,7 @@ buttonFontDecrease.addEventListener('click', function (e) {
     html.style.fontSize = newFontSize;
 });
 
+// Removing active class which is assigned on the middle bar
 let sections = document.querySelectorAll('.section');
 sections.forEach(function (elm) {
     elm.addEventListener('mouseover', function (e) {
@@ -46,6 +44,24 @@ sections.forEach(function (elm) {
     });
 });
 
+// Video player for iOS/Other
+let videoElements = document.querySelectorAll('video');
+videoElements.forEach(video => {
+    var id = video.id;
+    var canvasId = `for-${id}`;
+    var canvas = document.getElementById(canvasId);
+    canvas.style.display = isIOS ? 'block' : 'none';
+    video.style.display = isIOS ? 'none' : 'block';
 
-
-
+    if (isIOS) {
+        var canvasVideo = new CanvasVideoPlayer({
+            videoSelector: `#${id}`,
+            canvasSelector: `#${canvasId}`,
+            timelineSelector: false,
+            autoplay: true,
+            makeLoop: true,
+            pauseOnClick: false,
+            audio: false
+        });
+    }
+});

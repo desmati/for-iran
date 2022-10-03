@@ -46,24 +46,28 @@
                 </article>
             </section>
             <section class="section section-90s">
-                <video src="./assets/media/green.mp4"
+                <video id="video-green" src="./assets/media/green.mp4"
                     alt="Roger Waters concert displaying Mahsa Amini on background of scene- For Iran" controls=""
                     controlslist="nodownload" autoplay loop="loop" muted></video>
+                <canvas id="for-video-green"></canvas>
                 <article>
                     <h2>Women</h2>
                 </article>
             </section>
             <section class="section section-video-bg active">
-                <video src="./assets/media/white.mp4" alt="Roger Waters speaking of Mahsa Amini - For Iran" controls=""
-                    controlslist="nodownload" autoplay loop="loop" muted></video>
+                <video id="video-white" src="./assets/media/white.mp4"
+                    alt="Roger Waters speaking of Mahsa Amini - For Iran" controls="" controlslist="nodownload" autoplay
+                    loop="loop" muted></video>
+                <canvas id="for-video-white"></canvas>
                 <article>
                     <h2>Life</h2>
                 </article>
             </section>
             <section class="section">
-                <video src="./assets/media/red.mp4"
+                <video id="video-red" src="./assets/media/red.mp4"
                     alt="Roger Waters concert we don't need no education performance - For Iran" controls=""
                     controlslist="nodownload" autoplay loop="loop" muted></video>
+                <canvas id="for-video-red"></canvas>
                 <article>
                     <h2>Liberty</h2>
                 </article>
@@ -83,6 +87,7 @@
     <button type="button" tabindex="-1" aria-hidden="true" id="btn-font-decrease"
         title="Click here to decrease font size.">-</button>
 
+    <script src="./assets/lib/canvas-video-player.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
