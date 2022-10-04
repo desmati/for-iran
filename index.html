@@ -39,36 +39,37 @@
 
 <body>
     <main>
-        <h1><span>For Iran, #MahsaAmini</span></h1>
+        <h1 tabindex="1"><span>For Iran, #MahsaAmini</span></h1>
         <div class="container">
             <section class="section">
                 <article>
                 </article>
             </section>
             <section class="section section-90s">
-                <video id="video-green" src="./assets/media/green.mp4"
+                <video tabindex="-1" id="video-green" src="./assets/media/green.mp4"
                     alt="Roger Waters concert displaying Mahsa Amini on background of scene - For Iran" controls=""
                     controlslist="nodownload" autoplay loop="loop" muted></video>
                 <canvas id="for-video-green"></canvas>
                 <article>
-                    <h2>Women</h2>
+                    <h2 tabindex="2">Women</h2>
                 </article>
             </section>
             <section class="section section-video-bg active">
-                <video id="video-white" src="./assets/media/white.mp4"
+                <video tabindex="-1" id="video-white" src="./assets/media/white.mp4"
                     alt="Roger Waters speaking of Mahsa Amini - For Iran" controls="" controlslist="nodownload" autoplay
                     loop="loop" muted></video>
                 <canvas id="for-video-white"></canvas>
                 <article>
-                    <h2>Life</h2>
+                    <h2 tabindex="3">Life</h2>
                 </article>
             </section>
             <section class="section">
-                <video id="video-red" src="./assets/media/red.mp4" alt="Women are protesting for liberty in Iran."
-                    controls="" controlslist="nodownload" autoplay loop="loop" muted></video>
+                <video tabindex="-1" id="video-red" src="./assets/media/red.mp4"
+                    alt="Women are protesting for liberty in Iran." controls="" controlslist="nodownload" autoplay
+                    loop="loop" muted></video>
                 <canvas id="for-video-red"></canvas>
                 <article>
-                    <h2>Liberty</h2>
+                    <h2 tabindex="4">Liberty</h2>
                 </article>
             </section>
             <section class="section">
@@ -78,12 +79,12 @@
         </div>
     </main>
 
-    <button type="button" tabindex="-1" aria-hidden="true" id="btn-contrast"
+    <button type="button" tabindex="5" aria-hidden="true" id="btn-contrast"
         title="Click here to remove images. Colors would be more clear.">High
         Contrast</button>
-    <button type="button" tabindex="-1" aria-hidden="true" id="btn-font-increase"
+    <button type="button" tabindex="6" aria-hidden="true" id="btn-font-increase"
         title="Click here to increase font size">+</button>
-    <button type="button" tabindex="-1" aria-hidden="true" id="btn-font-decrease"
+    <button type="button" tabindex="7" aria-hidden="true" id="btn-font-decrease"
         title="Click here to decrease font size.">-</button>
 
     <script src="./assets/lib/canvas-video-player.js"></script>

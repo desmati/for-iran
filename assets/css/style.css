@@ -16,6 +16,18 @@
     cursor: pointer;
 }
 
+#btn-contrast:active,
+#btn-contrast:focus,
+#btn-font-increase:active,
+#btn-font-increase:focus,
+#btn-font-decrease:active,
+#btn-font-decrease:focus {
+    color: #fff;
+    background: #000;
+    border: 1px dashed #fff;
+    box-shadow: 0px 0px 5px #fff;
+}
+
 #btn-font-increase,
 #btn-font-decrease {
     width: 30px;
@@ -38,6 +50,19 @@ h1 {
     padding: 1rem;
     width: 100%;
     text-align: center;
+}
+
+h1:active,
+h1:focus,
+h1:hover,
+h2:active,
+h2:focus,
+h2:hover {
+    color: #fff;
+    background: #000;
+    border: 1px dashed #fff;
+    box-shadow: 0px 0px 5px #fff;
+    padding: 1rem;
 }
 
 h1>span {
