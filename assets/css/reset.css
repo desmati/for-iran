@@ -31,7 +31,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1rem;
     line-height: 1.4rem;
-    background-color: black;
+    background-color: #fff;
 }
 
 h1,
@@ -45,7 +45,25 @@ a {
     font-family: 'Titillium Web', sans-serif;
 }
 
-figure img {
+figure {
+    position: relative;
+}
+
+figure>img,
+figure video {
     width: 100%;
     height: auto;
+}
+
+figcaption {
+    width: 90%;
+    z-index: 1;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: .2rem;
+    position: absolute;
+    top: calc(100% - 1rem);
+    transform: translateY(-100%);
+    box-shadow: 2px 2px 0 #fff;
 }

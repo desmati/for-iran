@@ -1,0 +1,37 @@
+.carousel {
+    margin-bottom: 1rem;
+}
+
+.carousel:hover .carousel-content {
+    animation: none;
+}
+
+.carousel-content {
+    display: flex;
+    animation: scrolling 30s linear infinite;
+}
+
+.carousel-item {
+    flex: 0 0 16vw;
+    margin: 0 1vw;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
+}
+
+.carousel-item img {
+    display: block;
+    width: 10rem;
+    height: 7em;
+    object-fit: cover;
+    /*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translatex(-144vw);
+    }
+}

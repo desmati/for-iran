@@ -28,7 +28,8 @@
     <link rel="apple-touch-icon" sizes="128x128" href="./assets/img/iran.jpeg">
     <link rel="apple-touch-icon" sizes="192x192" href="./assets/img/iran.jpeg">
 
-    <base href="/" target="_blank" />
+    <base href="/" />
+    <!-- <base href="/" target="_blank" /> -->
     <link rel="canonical" href="https://for-iran.netlify.app/" />
     <link rel="preconnect" href="https://for-iran.netlify.app/" crossorigin>
     <link rel="icon" href="./assets/img/iran.jpeg">
@@ -38,48 +39,347 @@
     <link rel="stylesheet" href="./assets/css/animate.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/a11y.css" />
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+    <link rel="stylesheet" href="./assets/css/content-box.css" />
+    <link rel="stylesheet" href="./assets/css/carousel.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
+    <aside id="a11y">
+        <button type="button" tabindex="5" aria-hidden="true" id="a11y__contrast--toggle"
+            title="Click here to remove images. Colors would be more clear.">High
+            Contrast</button>
+        <button type="button" tabindex="6" aria-hidden="true" id="a11y__font--increase"
+            title="Click here to increase font size">+</button>
+        <button type="button" tabindex="7" aria-hidden="true" id="a11y__font--decrease"
+            title="Click here to decrease font size.">-</button>
+    </aside>
+    <nav id="menu" tabindex="1">
+        <input type="checkbox" id="menu__toggle" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu__items">
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+            <a href="#">
+                <li>Info</li>
+            </a>
+            <a href="#">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+
     <header class="header">
-        <h1 class="header__title" tabindex="1"><span>For Iran, #MahsaAmini</span></h1>
-        <button class="header__get-started" type="button"><i class="icon__chevron--down"></i></button>
+        <h1 class="header__title" role="heading" tabindex="2"><span>For Iran, #MahsaAmini</span></h1>
+
+        <a href="#first-section" class="header__get-started" type="button"><i class="icon__chevron--down"></i></a>
         <ul class="bars">
             <li class="bars__bar bars__bar-1"></li>
             <li class="bars__bar bars__bar-2">
                 <video class="bars__bar--video" tabindex="-1" id="video-green" src="./assets/media/green.mp4"
                     alt="Roger Waters concert displaying Mahsa Amini on background of scene - For Iran" controls=""
                     controlslist="nodownload" autoplay loop="loop" muted></video>
-                <h2 class="bars__bar--title" tabindex="2">Women</h2>
+                <span class="bars__bar--title" role="heading" tabindex="3">Women</span>
             </li>
             <li class="bars__bar bars__bar-3 active">
                 <video class="bars__bar--video" tabindex="-1" id="video-white" src="./assets/media/white.mp4"
                     alt="Roger Waters speaking of Mahsa Amini - For Iran" controls="" controlslist="nodownload" autoplay
                     loop="loop" muted></video>
-                <h2 class="bars__bar--title" tabindex="3">Life</h2>
+                <span class="bars__bar--title" role="heading" tabindex="3">Life</span>
             </li>
             <li class="bars__bar bars__bar-4">
                 <video class="bars__bar--video" tabindex="-1" id="video-red" src="./assets/media/red.mp4"
                     alt="Women are protesting for liberty in Iran." controls="" controlslist="nodownload" autoplay
                     loop="loop" muted></video>
-                <h2 class="bars__bar--title" tabindex="4">Liberty</h2>
+                <span class="bars__bar--title" role="heading" tabindex="3">Liberty</span>
             </li>
             <li class="bars__bar bars__bar-5"></li>
         </ul>
 
 
     </header>
-    skdgfksdfksdhf
-    <button type="button" tabindex="5" aria-hidden="true" id="a11y__contrast--toggle"
-        title="Click here to remove images. Colors would be more clear.">High
-        Contrast</button>
-    <button type="button" tabindex="6" aria-hidden="true" id="a11y__font--increase"
-        title="Click here to increase font size">+</button>
-    <button type="button" tabindex="7" aria-hidden="true" id="a11y__font--decrease"
-        title="Click here to decrease font size.">-</button>
+
+    <div class="boxes">
+        <div class="boxes__box">
+            <section class="content-box" id="first-section">
+                <article>
+                    <h2 class="content-box__title">What happened and what is happening in Iran?</h2>
+                    <figure>
+                        <img src="./assets/img/timeline/shah-iran-university-students.jpg"
+                            alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                        <figcaption>Students in the university of Tehran</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        You may wonder what is happening in Iran? What are people fighting for? To know the answer,
+                        let's
+                        review what has happening in Iran since 1979.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">Life in Iran Before 1979</h2>
+                    <div class="carousel">
+                        <div class="carousel-content">
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/life-under-the-shah.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-family.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-pool.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-long-hair.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-lake.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-university.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-beauty-pageant.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/life-under-the-shah.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-family.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-pool.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-long-hair.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-lake.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-university.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="./assets/img/timeline/shah-iran-beauty-pageant.jpg"
+                                    alt="A photo that is displaying some students in the university of Tehran who are both men and women withoud any restriction they are talking together.">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <p class="content-box__caption">
+                        People were happy having freedom and equity
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">After 1979, Ayatollas Came</h2>
+                    <figure>
+                        <img src="./assets/img/timeline/ayatollas.webp"
+                            alt="A photo that is displaying some people are welcomming ayatollas.">
+                        <figcaption>Support of Ayatollah Ruhollah Khomeini</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        In February of 1979, Tehran was in chaos. A cancer-stricken Mohammed Reza Pahlavi, the
+                        Western-backed autocrat, had gone into exile in mid-January, leaving behind a rickety regency
+                        council. On Feb. 1, Grand Ayatollah Ruhollah Khomeini, the godfather of the revolution, returned
+                        from exile in Paris. And in the Iranian version of “Ten Days That Shook the World,” street
+                        demonstrations raged until the government collapsed on Feb. 11.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">People lost their freedom</h2>
+                    <figure>
+                        <img src="./assets/img/timeline/nofreedom.webp"
+                            alt="A photo that is displaying some people are welcomming ayatollas.">
+                        <figcaption>Men and women were strictly separated in public</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        After 1979, it took around 40 years for people to understand that ayatollas are not what they
+                        have
+                        promised. They are sad and desperete nowadays.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">People did their best</h2>
+                    <figure>
+                        <video src="./assets/img/timeline/tir78.mp4" controls="" controlslist="nodownload" autoplay
+                            loop="loop" muted></video>
+                        <figcaption>upon every protest they have been turtured and murdered</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        The Iranian student protests of July 1999 in Iran were, before the 2009 Iranian election
+                        protests,
+                        the most widespread and violent public protests to occur in Iran since the early years of the
+                        Iranian Revolution.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">Green Wave of Iran, 2009</h2>
+                    <figure>
+                        <img src="./assets/img/timeline/green-movement.jpg" alt="Protesters in Tehran, 16 June">
+                        <figcaption>Protesters in Tehran, 16 June
+                        </figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        Green Wave of Iran also referred to as the Persian Awakening or Persian
+                        Spring by the western media, refers to a political movement that arose after the 2009 Iranian
+                        presidential election, in which protesters demanded the removal of Mahmoud Ahmadinejad from
+                        office.
+                        <br>
+                        Major protests would continue after the inauguration as well. Among the largest were protests
+                        that
+                        were held on Iranian holidays, such as Quds Day on 18 September, 13th of Aban on 4 November and
+                        Iranian Students Day on 7 December. According to The Guardian, it was projected that more
+                        than 500,000 people participated in the 2009 presidential election protest. According to the
+                        Associated Press, it is speculated that the protests may be connected to the country's economy
+                        and
+                        corruption.
+                        <br>
+                        Another wave of protests occurred following these election protests across Iran in 2011.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">2019–2020 Iranian protests
+                    </h2>
+                    <figure>
+                        <img src="./assets/img/timeline/Iranian_fuel_protests.jpg" alt="Protesters in Tehran, 16 June">
+                        <figcaption>As many as 1,500 Iranian protesters were killed.</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        A series of nationwide civil protests in Iran, sometimes known as Bloody November took place in
+                        2019
+                        and 2020. Initially caused by a 200% increase in fuel prices, they occurred as part
+                        of the wider Iranian Democracy Movement, leading to calls for the overthrow of the government in
+                        Iran and Supreme Leader Ali Khamenei.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">Death of Mahsa Amini</h2>
+                    <figure>
+                        <img src="./assets/img/timeline/mahsaamini.jpeg" alt="Mahsa Amini">
+                        <figcaption>Death of Mahsa Amini due to police brutality</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        Amini's death resulted in a series of large-scale protests across the country which garnered
+                        international attention, including a statement from the United Nations High Commissioner for
+                        Refugees, putting a focus on violence against women in the Islamic Republic of Iran.
+                        Several leaders, organizations, and celebrities around the world condemned the incident and
+                        expressed solidarity with the protesters. The United States Department of the Treasury and
+                        Canada imposed sanctions on the morality police and Iranian leaders in various security
+                        organizations.
+                        <br>
+                        <br>
+                        The government of Iran attempted to suppress the protests, shooting protesters with birdshot and
+                        metal pellets, deploying tear gas and water cannons, blocking access to many apps including
+                        Instagram and WhatsApp, and limiting internet accessibility to reduce protesters' ability to
+                        organize. These may be the most severe internet restrictions in Iran since 2019, when the
+                        internet
+                        was shut down completely.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+        <div class="boxes__box">
+            <section class="content-box">
+                <article>
+                    <h2 class="content-box__title">What then?</h2>
+                    <figure>
+                        <img src="./assets/img/timeline/2022.webp" alt="Mahsa Amini">
+                        <figcaption>Something big is happening’: the Iranians risking everything to protest</figcaption>
+                    </figure>
+                    <p class="content-box__caption">
+                        This uprising has united people across ethnic lines that used to divide us.
+                        During the 2019 protests, there was no unity between Iranian Arabs, Turks, Kurds and so on.
+                        This time, people chant slogans such as ‘From Tabriz to Sanandaj, from Tehran to Mashhad.’
+                        This time people are more united and persistent. We hope for change. Maybe not right now but we
+                        will
+                        try our best to achievve this goal.
+                    </p>
+                </article>
+            </section>
+            <div class="content-box__seprator--down"></div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        by Hossein Esmati, <a href="http://desmati.com">desmati.com</a>
+    </footer>
 
     <script src="./assets/lib/canvas-video-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="./assets/js/a11y.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

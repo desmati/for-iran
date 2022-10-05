@@ -1,11 +1,20 @@
+#a11y {
+    width: 100%;
+    height: 3rem;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    top: 3.5rem;
+    left: 0.5rem;
+}
+
 #a11y__contrast--toggle,
 #a11y__font--increase,
 #a11y__font--decrease {
     width: 120px;
     text-align: center;
-    position: fixed;
-    top: 12px;
-    left: 12px;
+    margin: 12px 0 0 0;
     padding: 8px 12px;
     font-size: 10px;
     text-transform: uppercase;
@@ -39,12 +48,9 @@
     left: 180px;
 }
 
-/* 
-h2:active,
-h2:focus {
-    color: #fff;
-    background: #000;
-    border: 1px dashed #fff;
-    box-shadow: 0px 0px 5px #fff;
-    padding: 1rem;
-} */
+@media (min-width: 768px) {
+    #a11y {
+        top: 0;
+    }
+
+}

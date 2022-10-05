@@ -1,0 +1,44 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-1 {
+        width: calc(100% / 3);
+    }
+
+    .col-2 {
+        width: calc(100% / 3 * 2);
+    }
+
+    .col-3 {
+        width: calc(100%);
+    }
+}
+
+@media (min-width: 970px) {
+    .col-1 {
+        width: calc(100% / 2);
+    }
+
+    .col-2 {
+        width: calc(100%);
+    }
+
+    .col-3 {
+        width: calc(100%);
+    }
+}

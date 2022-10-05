@@ -36,3 +36,9 @@ videoElements.forEach(video => {
         });
     }
 });
+
+
+$('.boxes').masonry({
+    // options
+    itemSelector: '.boxes__box'
+});
