@@ -1,0 +1,284 @@
+.header {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: block;
+}
+
+.header__title {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    font-size: 2rem;
+    top: 20vh;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    height: 3.5rem;
+    overflow: hidden;
+}
+
+.header__title:active,
+.header__title:focus {
+    color: #fff;
+    background: #000;
+    border: 1px dashed #fff;
+    box-shadow: 0px 0px 5px #fff;
+    padding: 1rem;
+}
+
+.header__title>span {
+    text-shadow: 2px 2px 4px #000;
+    display: block;
+    text-align: center;
+}
+
+.header__get-started {
+    cursor: pointer;
+    z-index: 2;
+    background: none;
+    border: 0;
+    font-size: 1rem;
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 0.6rem 0.5rem 0.4rem 0.8rem;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    color: #fffa;
+}
+
+.header__get-started i {
+    animation: jello 2s linear infinite alternate;
+}
+
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.bars__bar-2:hover,
+.bars__bar-3:hover,
+.bars__bar-4:hover,
+.bars__bar.active {
+    flex: 2;
+}
+
+.bars__bar:hover .bars__bar--title,
+.bars__bar.active .bars__bar--title {
+    opacity: 1;
+    transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
+}
+
+.bars__bar {
+    flex: 1;
+    position: relative;
+    width: 100vw;
+    min-height: 40vh;
+    overflow: hidden;
+    z-index: 1;
+    transition: flex-grow 0.2s, opacity 0.2s;
+}
+
+.bars__bar--video,
+.bars__bar--video-ios {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.bars__bar:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.2s, width 0.2s;
+}
+
+.bars__bar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.bars__bar-1:before,
+.bars__bar-5:before {
+    /* The first and last box background color */
+    background: url(../img/flag-plain.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: 50% 50%;
+    background-color: #8d8d8d;
+}
+
+.bars__bar-2:before {
+    /* The 2nd Box Background */
+    background-color: #7c7c7c;
+    background-size: contain;
+    background-position: 25vw center;
+}
+
+.bars__bar-2:after {
+    background-color: #0a0;
+}
+
+.bars__bar-3:before {
+    background-color: #6b6b6b;
+}
+
+.bars__bar-3:after {
+    background-color: #fff;
+}
+
+.bars__bar-4:before {
+    background-color: #5a5a5a;
+}
+
+.bars__bar-4:after {
+    background-color: #a00;
+}
+
+.bars__bar--title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    font-size: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hide-images .bars__bar:before {
+    background-image: none;
+}
+
+.hide-images .bars__bar:after {
+    display: none;
+}
+
+.hide-images .bars__bar--video,
+.hide-images .bars__bar--video-ios {
+    display: none !important;
+}
+
+.hide-images .header__title span {
+    animation: none;
+}
+
+@media (min-width: 768px) {
+    .header__title {
+        background: rgba(0, 0, 0, 0.4);
+        top: 80vh;
+
+    }
+
+    .header__title span {
+        display: block;
+        width: 25rem;
+        text-align: center;
+        /* animation: bounce-move 5s linear infinite alternate; */
+    }
+
+    @keyframes bounce-move {
+        0% {
+            transform: translateX(calc(100vw - 25rem));
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    .header__get-started {
+        top: 80vh;
+        transform: translate(-50%, -50%);
+    }
+
+    .bars {
+        flex-direction: row;
+        width: 130vw;
+        margin-left: -15vw;
+    }
+
+    .bars__bar:hover .header__title {
+        transform: skewX(-15deg);
+    }
+
+    .bars__bar {
+        width: 20vw;
+        height: 100vh;
+        margin-right: -1px;
+        transform: skewX(15deg);
+    }
+
+    .bars__bar:before {
+        left: -100vw;
+        width: 400vw;
+        transform: skewX(-15deg);
+    }
+
+    .bars__bar:after {
+        opacity: 0.5;
+    }
+
+    .bars__bar-1:before,
+    .bars__bar-5:before {
+        /* The first and last box background color */
+        background-size: contain !important;
+    }
+
+    .bars__bar--title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: auto;
+        margin: auto;
+        opacity: 0.7;
+        transform: skewX(-15deg);
+    }
+
+    .bars__bar--video,
+    .bars__bar--video-ios {
+        transform: skewX(-15deg);
+        width: auto;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -50%;
+    }
+}

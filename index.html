@@ -34,60 +34,53 @@
     <link rel="icon" href="./assets/img/iran.jpeg">
 
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/icons.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/a11y.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <main>
-        <h1 tabindex="1"><span>For Iran, #MahsaAmini</span></h1>
-        <div class="container">
-            <section class="section">
-                <article>
-                </article>
-            </section>
-            <section class="section section-90s">
-                <video tabindex="-1" id="video-green" src="./assets/media/green.mp4"
+    <header class="header">
+        <h1 class="header__title" tabindex="1"><span>For Iran, #MahsaAmini</span></h1>
+        <button class="header__get-started" type="button"><i class="icon__chevron--down"></i></button>
+        <ul class="bars">
+            <li class="bars__bar bars__bar-1"></li>
+            <li class="bars__bar bars__bar-2">
+                <video class="bars__bar--video" tabindex="-1" id="video-green" src="./assets/media/green.mp4"
                     alt="Roger Waters concert displaying Mahsa Amini on background of scene - For Iran" controls=""
                     controlslist="nodownload" autoplay loop="loop" muted></video>
-                <canvas id="for-video-green"></canvas>
-                <article>
-                    <h2 tabindex="2">Women</h2>
-                </article>
-            </section>
-            <section class="section section-video-bg active">
-                <video tabindex="-1" id="video-white" src="./assets/media/white.mp4"
+                <h2 class="bars__bar--title" tabindex="2">Women</h2>
+            </li>
+            <li class="bars__bar bars__bar-3 active">
+                <video class="bars__bar--video" tabindex="-1" id="video-white" src="./assets/media/white.mp4"
                     alt="Roger Waters speaking of Mahsa Amini - For Iran" controls="" controlslist="nodownload" autoplay
                     loop="loop" muted></video>
-                <canvas id="for-video-white"></canvas>
-                <article>
-                    <h2 tabindex="3">Life</h2>
-                </article>
-            </section>
-            <section class="section">
-                <video tabindex="-1" id="video-red" src="./assets/media/red.mp4"
+                <h2 class="bars__bar--title" tabindex="3">Life</h2>
+            </li>
+            <li class="bars__bar bars__bar-4">
+                <video class="bars__bar--video" tabindex="-1" id="video-red" src="./assets/media/red.mp4"
                     alt="Women are protesting for liberty in Iran." controls="" controlslist="nodownload" autoplay
                     loop="loop" muted></video>
-                <canvas id="for-video-red"></canvas>
-                <article>
-                    <h2 tabindex="4">Liberty</h2>
-                </article>
-            </section>
-            <section class="section">
-                <article>
-                </article>
-            </section>
-        </div>
-    </main>
+                <h2 class="bars__bar--title" tabindex="4">Liberty</h2>
+            </li>
+            <li class="bars__bar bars__bar-5"></li>
+        </ul>
 
-    <button type="button" tabindex="5" aria-hidden="true" id="btn-contrast"
+
+    </header>
+    skdgfksdfksdhf
+    <button type="button" tabindex="5" aria-hidden="true" id="a11y__contrast--toggle"
         title="Click here to remove images. Colors would be more clear.">High
         Contrast</button>
-    <button type="button" tabindex="6" aria-hidden="true" id="btn-font-increase"
+    <button type="button" tabindex="6" aria-hidden="true" id="a11y__font--increase"
         title="Click here to increase font size">+</button>
-    <button type="button" tabindex="7" aria-hidden="true" id="btn-font-decrease"
+    <button type="button" tabindex="7" aria-hidden="true" id="a11y__font--decrease"
         title="Click here to decrease font size.">-</button>
 
     <script src="./assets/lib/canvas-video-player.js"></script>
+    <script src="./assets/js/a11y.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

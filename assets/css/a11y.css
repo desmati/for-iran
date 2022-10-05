@@ -1,0 +1,50 @@
+#a11y__contrast--toggle,
+#a11y__font--increase,
+#a11y__font--decrease {
+    width: 120px;
+    text-align: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#a11y__contrast--toggle:active,
+#a11y__contrast--toggle:focus,
+#a11y__font--increase:active,
+#a11y__font--increase:focus,
+#a11y__font--decrease:active,
+#a11y__font--decrease:focus {
+    color: #fff;
+    background: #000;
+    border: 1px dashed #fff;
+    box-shadow: 0px 0px 5px #fff;
+}
+
+#a11y__font--increase,
+#a11y__font--decrease {
+    width: 30px;
+    left: 140px;
+}
+
+#a11y__font--decrease {
+    width: 30px;
+    left: 180px;
+}
+
+/* 
+h2:active,
+h2:focus {
+    color: #fff;
+    background: #000;
+    border: 1px dashed #fff;
+    box-shadow: 0px 0px 5px #fff;
+    padding: 1rem;
+} */
