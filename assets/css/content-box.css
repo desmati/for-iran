@@ -1,12 +1,3 @@
-.boxes {
-    margin-left: 2rem;
-    width: calc(100vw - 2rem);
-}
-
-.boxes__box {
-    width: 100%;
-}
-
 .content-box {
     padding: 1rem;
     margin: 1rem 10px 0 0;
@@ -61,29 +52,4 @@
 figcaption {
     background: #6d000080;
     box-shadow: 2px 2px 0 #125020;
-}
-
-@media (min-width: 600px) {
-    .boxes__box {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .boxes__box {
-        width: 50%;
-    }
-}
-
-
-@media (min-width: 992px) {
-    .boxes__box {
-        width: 33%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .boxes__box {
-        width: 25%;
-    }
 }

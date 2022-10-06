@@ -1,5 +1,5 @@
 // Toggling how contrast mode
-let buttonContrast = document.getElementById('a11y__contrast--toggle');
+let buttonContrast = E('#a11y__contrast--toggle');
 buttonContrast.addEventListener('click', function (e) {
     // body.classList.toggle("hide-images");
     if (body.classList.contains('hide-images')) {
@@ -12,7 +12,7 @@ buttonContrast.addEventListener('click', function (e) {
 });
 
 // Increasing font size
-let buttonFontIncrease = document.getElementById('a11y__font--increase');
+let buttonFontIncrease = E('#a11y__font--increase');
 buttonFontIncrease.addEventListener('click', function (e) {
     let computedFontSize = window.getComputedStyle(html).fontSize;
     let fontSize = parseInt(computedFontSize);
@@ -22,7 +22,7 @@ buttonFontIncrease.addEventListener('click', function (e) {
 });
 
 // Decreasing font size
-let buttonFontDecrease = document.getElementById('a11y__font--decrease');
+let buttonFontDecrease = E('#a11y__font--decrease');
 buttonFontDecrease.addEventListener('click', function (e) {
     let computedFontSize = window.getComputedStyle(html).fontSize;
     let fontSize = parseInt(computedFontSize);

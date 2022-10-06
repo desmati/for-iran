@@ -7,6 +7,10 @@
     border: 0 none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ul,
 ul li,
 ol,

@@ -1,11 +1,11 @@
-let html = document.getElementsByTagName('html')[0];
-let body = document.getElementsByTagName('body')[0];
+let html = E('html')[0];
+let body = E('body')[0];
 let isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
 
 
 
 // Removing active class which is assigned on the middle bar
-let sections = document.querySelectorAll('.bars__bar');
+let sections = E('.bars__bar');
 sections.forEach(function (elm) {
     elm.addEventListener('mouseover', function (e) {
         sections.forEach(function (elm) {
@@ -15,7 +15,7 @@ sections.forEach(function (elm) {
 });
 
 // Video player for iOS/Other
-let videoElements = document.querySelectorAll('.bars__bar--video');
+let videoElements = E('.bars__bar--video');
 videoElements.forEach(video => {
     var id = video.id;
     var canvasId = `for-${id}`;
@@ -23,7 +23,7 @@ videoElements.forEach(video => {
 
     if (isIOS) {
         video.insertAdjacentHTML('afterend', `<canvas id="${canvasId}" class="bars__bar--video-ios"></canvas>`);
-        var canvas = document.getElementById(canvasId);
+        var canvas = E(`#${canvasId}`);
         canvas.style.display = isIOS ? 'block' : 'none';
         var canvasVideo = new CanvasVideoPlayer({
             videoSelector: `#${id}`,
@@ -37,8 +37,3 @@ videoElements.forEach(video => {
     }
 });
 
-
-$('.boxes').masonry({
-    // options
-    itemSelector: '.boxes__box'
-});
