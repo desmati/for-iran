@@ -25,7 +25,7 @@ videoElements.forEach(video => {
         video.insertAdjacentHTML('afterend', `<canvas id="${canvasId}" class="bars__bar--video-ios"></canvas>`);
         var canvas = E(`#${canvasId}`);
         canvas.style.display = isIOS ? 'block' : 'none';
-        var canvasVideo = new CanvasVideoPlayer({
+        new CanvasVideoPlayer({
             videoSelector: `#${id}`,
             canvasSelector: `#${canvasId}`,
             timelineSelector: false,
@@ -36,4 +36,3 @@ videoElements.forEach(video => {
         });
     }
 });
-

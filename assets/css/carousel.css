@@ -3,7 +3,10 @@
 }
 
 .carousel:hover .carousel-content {
-    animation: none;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
 }
 
 .carousel-content {
