@@ -9,7 +9,8 @@
     left: 1rem;
     box-shadow: 0 0 75px #000;
     background: #000;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .dialog img {
