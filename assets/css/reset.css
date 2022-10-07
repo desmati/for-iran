@@ -59,6 +59,10 @@ figure video {
     height: auto;
 }
 
+figure>img {
+    cursor: pointer;
+}
+
 figcaption {
     width: 90%;
     z-index: 1;
